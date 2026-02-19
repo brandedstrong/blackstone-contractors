@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, ArrowRight, Shield, Award, Clock, Users } from 'lucide-react';
@@ -240,9 +241,12 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="aspect-[4/5] bg-[var(--color-warm-gray)] rounded-lg overflow-hidden">
-                <div className="absolute inset-0 placeholder-image">
-                  Concrete Work Image
-                </div>
+                <Image
+                  src="/images/hero-concrete.png"
+                  alt="Professional concrete driveway installation"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[var(--color-gold)] text-[var(--color-charcoal)] p-6 rounded-lg">
                 <div className="text-3xl font-bold">2+</div>

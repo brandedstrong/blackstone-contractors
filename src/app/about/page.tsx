@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, Shield, Clock, Award, Users, Target, Heart } from 'lucide-react';
@@ -123,9 +124,12 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-[var(--color-warm-gray)] rounded-lg overflow-hidden">
-                <div className="absolute inset-0 placeholder-image">
-                  Team / Owner Photo
-                </div>
+                <Image
+                  src="/images/team-work.png"
+                  alt="Blackstone Contractors team at work"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-[var(--color-charcoal)] text-white p-8 rounded-lg">
                 <div className="text-4xl font-bold text-[var(--color-gold)]">9+</div>
@@ -186,9 +190,12 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] bg-[var(--color-slate)] rounded-lg overflow-hidden">
-                <div className="absolute inset-0 placeholder-image text-white/50">
-                  Owner at Work
-                </div>
+                <Image
+                  src="/images/driveway-install.png"
+                  alt="Concrete installation in progress"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
